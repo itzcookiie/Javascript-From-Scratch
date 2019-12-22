@@ -28,8 +28,18 @@ module.exports = () => {
                             options: {
                                 envName: 'reactAndTypeScript'
                             }
-                        },
+                        }
                     ]
+                },
+                {
+                    test: /\.css$/,
+                    exclude: /node_modules/,
+                    use: ['style-loader', 'css-loader']
+                },
+                {
+                    test: /\.(png|jpg|svg|gif)$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader'
                 }
             ]
         },
